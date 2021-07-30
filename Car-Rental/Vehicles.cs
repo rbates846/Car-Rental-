@@ -30,7 +30,7 @@ namespace Car_Rental
             GetVehiclesRecord();
         }
 
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-TU2KL502\SQLEXPRESS;Initial Catalog=carRental;Integrated Security=True");
 
         public int Id;
         private void GetVehiclesRecord()

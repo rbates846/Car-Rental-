@@ -51,7 +51,7 @@ namespace Car_Rental
             GetDriversRecord();
         }
 
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-TU2KL502\SQLEXPRESS;Initial Catalog=carRental;Integrated Security=True");
 
         public int Driver_Id;
 
@@ -135,7 +135,7 @@ namespace Car_Rental
         {
             if (Driver_Id > 0)
             {
-                SqlCommand cmd = new SqlCommand("UPDATE tbl_drivers SET Vehicle_T = @Vehicle_T, Name = @Name, NIC = @NIC, Age = @Age, Tel_No = @Tel_No  WHERE Driver_Id = @Driver_Id", con);
+                SqlCommand cmd = new SqlCommand("UPDATE tbl_drivers SET Vehicle_T = @Vehicle_T, Name = @Name, License_N = @License_N, Age = @Age, Tel_No = @Tel_No  WHERE Driver_Id = @Driver_Id", con);
                 cmd.CommandType = CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Vehicle_T", comboBox1.Text);
